@@ -1,0 +1,94 @@
+<html>
+	<head>
+		<title>e^pi^e^pi vs pi^e^pi^e</title>
+	</head>
+
+	<style>
+		body{
+			color : white;
+			background-color: black;
+			font-size : 25px;
+		}
+	</style>
+
+	<body>
+		We want to show that
+		\begin{equation} \label{eq1}
+		e^{\pi^{e^{\pi}}} > \pi^{e^{\pi^{e}}} (> 0)
+		\end{equation}
+		which is true if and only if
+		\begin{equation}
+			\pi^{e^{\pi}} > e^{\pi^{e}}ln(\pi)
+		\end{equation}
+		or equivalently
+		\begin{equation}
+			\frac{\pi^{e^{\pi}}}{e^{\pi^{e}}} > ln(\pi)
+		\end{equation}
+		is true.
+
+		Now observe that
+		\begin{equation}
+			e^e > \pi \iff e > ln(\pi)
+		\end{equation}
+
+		If the first inequality is true in
+		\begin{equation} \label{eq2}
+			\frac{\pi^{e^{\pi}}}{e^{\pi^{e}}} > e > ln(\pi)
+		\end{equation}
+		then \eqref{eq1} is also true.
+
+		\eqref{eq2} is equivalent to
+		\begin{align}
+			\pi^{e^{\pi}} > e \cdot e^{\pi^{e}} (>0)\\
+			e^{\pi} ln(\pi) > \pi^{e} + 1\\
+			\frac{e^{\pi}}{\pi^{e}} > \frac{\pi^{e} + 1}{\pi^{e} ln(\pi)} \label{qe4}
+		\end{align}
+
+		We know \( \frac{e^{\pi}}{\pi^{e}} > 1 \) and it seems very likely that 
+		\begin{equation} \label{eq3}
+			\frac{e^{\pi}}{\pi^{e}} > 1 > \frac{\pi^{e} + 1}{\pi^{e} ln(\pi)}
+		\end{equation}
+		
+		We now show that \eqref{qe4} holds by showing that \eqref{eq3} is true. Note that
+		\begin{equation}
+			\frac{\pi^{e} + 1}{\pi^{e} ln(\pi)} = \frac{1+\frac{1}{\pi^e}}{ln(\pi)} < \frac{1+\frac{1}{3^e}}{ln(\pi)} < \frac{1 + \frac{1}{3^{2.5}}}{ln(\pi)}
+		\end{equation}
+
+		\begin{equation}
+			3^{2.5} = x \iff x^2 = 3^5 = 243 \iff 15 < x < 16 \iff \frac{1}{3^{2.5}}< \frac{1}{15} 
+		\end{equation}
+
+		\begin{equation}
+			\frac{1 + \frac{1}{3^{2.5}}}{ln(\pi)} < \frac{\frac{16}{15}}{ln(\pi)} < \frac{\frac{16}{15}}{ln(3)}
+		\end{equation}
+
+		the problem now reduces to showing \( ln(3) > \frac{16}{15} \iff 3^{15} > e^{16} \iff 15log(3) > 16log(e) \)<br>
+		Now let \( x = log(3), 10^{x} = 3\)
+		\begin{align}
+			10^{7x} = 3^7 = 2187 > 1000 = 10^3 \\
+			x = log(3) > \frac{3}{7} \\
+			15log(3) > \frac{45}{7} > 6
+		\end{align}
+
+		\begin{align}
+			16log(e) < 16log(2.8) = 16(2log(2) + log(7) - 1) \\
+			10^{10log(2)} = 2^{10} = 1024 > 10^3 \\
+			log(2) > \frac{3}{10} \\
+			10^{4log(7)} = 7^4 = 2401 > 10^3 \\
+			log(7) > \frac{3}{4} \\
+			16log(e) < 16(2log(2) + log(7) - 1) < \frac{28}{5} < 6
+		\end{align}
+
+		so \( 15log(3) > 6 > 16log(e) \) and thus \eqref{eq1} is indeed true. QED
+	</body>
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>	
+	<script>
+		window.MathJax = {
+			tex: {
+				tags: 'ams'
+			}
+		};
+	</script>
+</html>
