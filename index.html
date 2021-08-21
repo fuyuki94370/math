@@ -62,24 +62,13 @@
 			\frac{1 + \frac{1}{3^{2.5}}}{ln(\pi)} < \frac{\frac{16}{15}}{ln(\pi)} < \frac{\frac{16}{15}}{ln(3)}
 		\end{equation}
 
-		the problem now reduces to showing \( ln(3) > \frac{16}{15} \iff 3^{15} > e^{16} \iff 15log(3) > 16log(e) \)<br>
-		Now let \( x = log(3), 10^{x} = 3\)
+		the problem now reduces to showing \( ln(3) > \frac{16}{15} \iff 3^{15} > e^{16} \)<br>
 		\begin{align}
-			10^{7x} = 3^7 = 2187 > 1000 = 10^3 \\
-			x = log(3) > \frac{3}{7} \\
-			15log(3) > \frac{45}{7} > 6
+			3^{15} = 243^3 = 59049 \cdot 243 > 59000 \cdot 243 = 14337700 \\
+			e^{16} < 2.8^{16} = 7.84^{8} = 61.4656^{4} < 61.5^{4} = 3782.25^{2} < 3783^{2} = 14311089
 		\end{align}
 
-		\begin{align}
-			16log(e) < 16log(2.8) = 16(2log(2) + log(7) - 1) \\
-			10^{10log(2)} = 2^{10} = 1024 > 10^3 \\
-			log(2) > \frac{3}{10} \\
-			10^{4log(7)} = 7^4 = 2401 > 10^3 \\
-			log(7) > \frac{3}{4} \\
-			16log(e) < 16(2log(2) + log(7) - 1) < \frac{28}{5} < 6
-		\end{align}
-
-		so \( 15log(3) > 6 > 16log(e) \) and thus \eqref{eq1} is indeed true. QED
+		so \( 3^{15} > e^{16} \) and thus \eqref{eq1} is indeed true. QED
 	</body>
 
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
